@@ -4,10 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accesso al file</title>
+  <style>
+    /* Stile per centrare il contenuto */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Altezza della finestra */
+      margin: 0;
+      background-color: #f4f4f4; /* Sfondo chiaro */
+      font-family: Arial, sans-serif; /* Font leggibile */
+    }
+
+    form {
+      text-align: center; /* Centra il testo */
+      background: white;
+      padding: 20px;
+      border-radius: 10px; /* Angoli arrotondati */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Leggera ombra */
+    }
+
+    input[type="text"] {
+      width: 80%; /* Dimensione della barra */
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>Inserisci il codice per scaricare il file</h1>
   <form id="accessForm">
+    <h1>Inserisci il codice per scaricare il file</h1>
     <input type="text" id="accessCode" placeholder="Inserisci il codice" required>
     <button type="submit">Scarica</button>
   </form>
