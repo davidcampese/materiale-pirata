@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>contenuto riservato</title>
+  <!-- Importa il font VT323 da Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <style>
-    
     body {
       display: flex;
       justify-content: center;
@@ -13,7 +14,8 @@
       height: 100vh; 
       margin: 0; 
       background-color: #000000; 
-      font-family: Arial, sans-serif; 
+      font-family: 'VT323', monospace; /* Applica il font VT323 */
+      color: limegreen; /* Colore del testo ispirato al tema elettronico */
     }
 
     form {
@@ -24,6 +26,12 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
 
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      animation: glitch 1.5s infinite;
+    }
+
     input[type="text"] {
       width: 80%; 
       padding: 10px;
@@ -31,6 +39,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 16px;
+      font-family: 'VT323', monospace; /* Font VT323 per l'input */
     }
 
     button {
@@ -42,10 +51,33 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      font-family: 'VT323', monospace; /* Font VT323 per il bottone */
     }
 
     button:hover {
       background-color: #0056b3;
+    }
+
+    /* Effetto glitch */
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px red;
+      }
+      20% {
+        text-shadow: -2px -2px blue;
+      }
+      40% {
+        text-shadow: 2px -2px cyan;
+      }
+      60% {
+        text-shadow: -2px 2px magenta;
+      }
+      80% {
+        text-shadow: 2px 2px lime;
+      }
+      100% {
+        text-shadow: -2px -2px yellow;
+      }
     }
   </style>
 </head>
@@ -59,8 +91,7 @@
     document.getElementById('accessForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const code = document.getElementById('accessCode').value;
-      if (code === 'pioggia digitale') {
-        
+      if (code === 'pioggiaDigitale') {
         const link = document.createElement('a');
         link.href = 'pioggia digitale_materiale_pirata.mp3'; 
         link.download = 'pioggia digitale_materiale_pirata.mp3'; 
