@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesso al file</title>
+</head>
+<body>
+  <h1>Inserisci il codice per scaricare il file</h1>
+  <form id="accessForm">
+    <input type="text" id="accessCode" placeholder="Inserisci il codice" required>
+    <button type="submit">Scarica</button>
+  </form>
+  <script>
+    document.getElementById('accessForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const code = document.getElementById('accessCode').value;
+      if (code === 'pioggiadigitale') {
+        window.location.href = 'file.wav'; // Percorso del file wav
+      } else {
+        alert('Codice errato');
+      }
+    });
+  </script>
+</body>
+</html>
