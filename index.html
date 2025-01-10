@@ -16,7 +16,13 @@
       e.preventDefault();
       const code = document.getElementById('accessCode').value;
       if (code === 'pioggiadigitale') {
-        window.location.href = 'pioggia digitale_materiale_pirata.mp3'; // Percorso del file mp3
+        // Creazione di un link invisibile per il download automatico
+        const link = document.createElement('a');
+        link.href = 'pioggia digitale_materiale_pirata.mp3'; // Percorso del file
+        link.download = 'pioggia digitale_materiale_pirata.mp3'; // Nome del file da scaricare
+        document.body.appendChild(link); // Aggiunge il link al DOM
+        link.click(); // Simula il clic per avviare il download
+        document.body.removeChild(link); // Rimuove il link dopo il clic
       } else {
         alert('Codice errato');
       }
