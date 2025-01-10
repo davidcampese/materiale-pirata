@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accesso al file</title>
+  <title>contenuto riservato</title>
   <style>
-    /* Centrare il contenuto */
+    
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Altezza totale della finestra */
-      margin: 0; /* Rimuove i margini */
-      background-color: #f4f4f4; /* Colore di sfondo */
-      font-family: Arial, sans-serif; /* Font leggibile */
+      height: 100vh; 
+      margin: 0; 
+      background-color: #000000; 
+      font-family: Arial, sans-serif; 
     }
 
     form {
-      text-align: center; /* Centra il testo all'interno del modulo */
+      text-align: center; 
       background: white;
       padding: 20px;
-      border-radius: 10px; /* Angoli arrotondati */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
 
     input[type="text"] {
-      width: 80%; /* Dimensione della barra */
+      width: 80%; 
       padding: 10px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
@@ -51,7 +51,7 @@
 </head>
 <body>
   <form id="accessForm">
-    <h1>Inserisci il codice per scaricare il file</h1>
+    <h1>Inserisci il codice per scaricare il file 👾</h1>
     <input type="text" id="accessCode" placeholder="Inserisci il codice" required>
     <button type="submit">Scarica</button>
   </form>
@@ -60,13 +60,13 @@
       e.preventDefault();
       const code = document.getElementById('accessCode').value;
       if (code === 'pioggiadigitale') {
-        // Creazione di un link invisibile per il download automatico
+        
         const link = document.createElement('a');
-        link.href = 'pioggia digitale_materiale_pirata.mp3'; // Percorso del file
-        link.download = 'pioggia digitale_materiale_pirata.mp3'; // Nome del file da scaricare
-        document.body.appendChild(link); // Aggiunge il link al DOM
-        link.click(); // Simula il clic per avviare il download
-        document.body.removeChild(link); // Rimuove il link dopo il clic
+        link.href = 'pioggia digitale_materiale_pirata.mp3'; 
+        link.download = 'pioggia digitale_materiale_pirata.mp3'; 
+        document.body.appendChild(link); 
+        link.click(); 
+        document.body.removeChild(link); 
       } else {
         alert('Codice errato');
       }
